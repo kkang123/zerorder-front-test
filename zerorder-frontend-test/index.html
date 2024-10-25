@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="/image/favicon.ico">
+    <title>상품조회</title>
+</head>
+<body>
+    <main>
+        <div class="search-product">
+            <h2 class="search-product__title">
+                <a href="/">상품조회</a>
+            </h2>
+            <form action="/" method="get" class="search-product__input-container">
+                <div class="input-wrapper">
+                    <label for="product-name">제품명</label><input id="product-name" name="product-name" type="text" >
+                </div>
+                <div class="input-wrapper categories">
+                    <label for="category">카테고리</label>
+                    <select id="category-id" name="category-id">
+                        <option value="0" selected>전체</option>
+                    </select>
+                </div>
+                <div class="input-wrapper">
+                    <label for="manufacturer">제조사</label><input id="manufacturer" name="manufacturer" type="text" >
+                </div>
+                <div class="button-container">
+                    <button class="button button--search">조회하기</button>
+                    <button class="button button--add" type="button">상품 추가하기</button>
+                </div>
+            </form>
+        
+            <table>
+                <thead>
+                    <tr>
+                        <th>id</th>
+                        <th>제품명 <span class="arrows"></span></th>
+                        <th>카테고리<span class="arrows"></span></th>
+                        <th>가격<span class="arrows"></span></th>
+                        <th>재고<span class="arrows"></span></th>
+                        <th>평점<span class="arrows"></span></th>
+                        <th>제조사<span class="arrows"></span></th>
+                        <th>추가일자<span class="arrows"></span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>무선 헤드폰</td>
+                        <td>전자제품</td>
+                        <td>99,000 원</td>
+                        <td>20 개</td>
+                        <td>4.5</td>
+                        <td>오디오테크</td>
+                        <td>2024-03-16</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="page-container">
+                <ul>
+                    <li class="active">
+                        <a href="http://localhost:5500/?page=1">1</a>
+                    </li>
+                    <li class="">
+                        <a href="http://localhost:5500/?page=2">2</a>
+                    </li>
+                    <li class="">
+                        <a href="http://localhost:5500/?page=3">3</a>
+                    </li>
+                    <li class="">
+                        <a href="http://localhost:5500/?page=4">4</a>
+                    </li>
+                    <li class="">
+                        <a href="http://localhost:5500/?page=5">5</a>
+                    </li>
+                    <li>
+                        <a href="http://localhost:5500/?page=6">&rarr;</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    <div class="modal hidden">
+        <div class="modal__backdrop">
+        </div>
+        <div class="modal__contents">
+            <div class="contents__header">
+                <h2 class="header__text">상품 추가하기</h2>
+                <div class="header__close">X</div>
+            </div>
+            <form class="contents__form">
+                <div class="item-container-wrapper">
+                    <div class="item-container">
+                        <div class="form__item">
+                            <label for="modal-product-name">제품명</label>
+                            <input type="text" id="modal-product-name" name="product-name">
+                        </div>
+                        <div class="form__item categories">
+                            <label for="modal-category">카테고리</label>
+                            <select name="category-id" id="modal-category-id">
+                                <option value="" selected disabled>선택해주세요</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="item-container">
+                        <div class="form__item">
+                            <label for="price">가격</label>
+                            <input type="number" id="modal-price" name="price" step="100" min="100">
+                        </div>
+                        <div class="form__item">
+                            <label for="stock">재고</label>
+                            <input type="number" id="modal-stock" name="stock">
+                        </div>
+                    </div>
+                    <div class="item-container">
+                        <div class="form__item">
+                            <label for="rating">평점</label>
+                            <input type="number" id="modal-rating" name="rating" step="0.1">
+                        </div>
+                        <div class="form__item">
+                            <label for="modal-manufacturer">제조사</label>
+                            <input type="text" id="modal-manufacturer" name="manufacturer">
+                        </div>
+                    </div>
+                </div>
+                <div class="form__button"><button class="button button--add">추가하기</button></div>
+            </form>
+        </div>
+    </div>
+
+
+    <script src="./index.js"></script>
+</body>
+</html>

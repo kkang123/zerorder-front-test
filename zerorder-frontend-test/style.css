@@ -1,0 +1,278 @@
+h2, ul, li {
+    padding: 0;
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+html {
+    font-family: "Pretendard", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+a, a:visited, a:active {
+    color: inherit;
+  }
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+button {
+    cursor: pointer;
+}
+
+th, td {
+    border-bottom: 1px solid #D1DBE8;
+    text-align: center;
+    padding: 10px;
+    color: #4F7396;
+}
+
+thead tr {
+    border-radius: 4px;
+    background-color: #E5E8EB;
+}
+
+tr:hover {
+    background-color: #e3e3e3;
+}
+
+main {
+    padding: 24px 120px;
+}
+
+.search-product {
+    min-width: 1080px;
+    margin: 0 auto;
+}
+
+.search-product__title {
+    font-size: 36px;
+    padding: 12px;
+}
+
+.search-product__input-container {
+    display: flex;
+}
+
+.input-wrapper {
+    min-width: 240px;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    height: 72px;
+}
+
+.input-wrapper input,
+.input-wrapper select {
+    flex-grow: 1;
+    height: 36px;
+    border-radius: 4px;
+    padding: 8px;
+    border: 1px solid #e3e3e3;
+}
+
+.button-container {
+    display: flex;
+}
+
+.input-wrapper label {
+    font-weight: bold;
+    margin-right: 12px;
+}
+
+.button-container {
+    margin-left: auto;
+    align-items: center;
+    column-gap: 8px;
+}
+
+.button {
+    border: none;
+    border-radius: 4px;
+    height: 36px;
+    padding: 8px 24px;
+    color:white;
+    font-family: inherit;
+    font-weight: bold;
+}
+
+.button--search{
+    background-color: #416aff;
+}
+
+.button--add {
+    background-color: #3dc291;
+}
+
+.page-container {
+    display: flex;
+    justify-content: center;
+    margin: 56px 0;
+}
+
+.page-container ul{
+    display: flex;
+    column-gap: 24px;
+}
+
+.page-container ul li {
+    border-radius: 4px;
+    height: 36px;
+    aspect-ratio: 1/1;
+
+    border: 1px solid #6c757d;
+}
+
+.page-container ul li.active {
+    color: white;
+    background-color: #416aff;
+    border-color: #416aff;
+}
+
+.page-container ul li a {
+    width: 100%;
+    height: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width:100vw;
+    height: 100vh;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.modal__backdrop {
+    position: absolute;
+    top:0;
+    left: 0;
+    display: flex;
+    background-color: #e3e3e322;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal__contents {
+    min-width: 632px;
+    max-width: 50%;
+    min-height: 35%;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 1px 1px 12px #dedede66;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.contents__header {
+    padding: 12px 24px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #e3e3e3;
+    background-color: #dedede66;
+    color: #6c757d;
+}
+
+.header__close {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.contents__form {
+    padding: 12px 48px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.form__item {
+    display: flex;
+    align-items: center;
+    height: 56px;
+    color: #6c757d;
+}
+
+.form__item label {
+    width: 80px;
+    font-weight: bold;
+}
+
+.form__item select,
+.form__item input {
+    width: 170px;
+    height: 36px;
+    border: 1px solid #e3e3e3;
+    flex-grow: 1;
+    border-radius: 4px;
+    padding: 8px;
+}
+
+.form__button {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+
+.item-container {
+    display: flex;
+    column-gap: 16px;
+    justify-content: space-between;
+}
+
+.hidden {
+    display: none;
+}
+
+.arrows{
+    display: inline-flex;
+    width: 10px;
+    height: 18px;
+    row-gap: 5px;
+    margin-left: 14px;
+    vertical-align: middle;
+    flex-direction: column;
+}
+
+.arrows::before {
+    width: 0; 
+    height: 0; 
+    content: "";
+    display: block;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid #bfbfbf;
+}
+
+.arrows::after {
+    width: 0; 
+    content: "";
+    height: 0; 
+    display: block;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #777;
+}
